@@ -32,3 +32,8 @@ print()
 print(person.items())
 print()
 print(person.values())
+
+print()
+a = 3
+# first condition met, 'A is positive' will be printed
+print('A is positive') if a > 0 else print('A is negative') 
