@@ -1,3 +1,5 @@
+import sys
+
 print("Hello world")
 for x in range(10):
     print(f'testing {x}')
@@ -49,3 +51,17 @@ for number in numbers:
     print('Next number should be ', number + 1) if number != 5 else print("loop's end") 
     
 print('outside the loop')
+
+print()
+print(sys.version)
+
+print()
+numbers = [(i, i * i) for i in range(11)]
+print(numbers)    
+
+print()
+# Flattening a three dimensional array
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(list_of_lists)
+flattened_list = [ number for row in list_of_lists for number in row]
+print(flattened_list)
