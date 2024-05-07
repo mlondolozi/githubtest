@@ -37,3 +37,15 @@ print()
 a = 3
 # first condition met, 'A is positive' will be printed
 print('A is positive') if a > 0 else print('A is negative') 
+
+print()
+numbers = (0,1,2,3,4,5)
+for number in numbers:
+    print(number)
+    if number == 3:
+        continue
+
+    # for short hand conditions need both if and else statements
+    print('Next number should be ', number + 1) if number != 5 else print("loop's end") 
+    
+print('outside the loop')
