@@ -46,3 +46,53 @@ def add_ten():
 closure_result = add_ten()
 print(closure_result(5))  # 15
 print(closure_result(10))  # 20
+
+print()
+
+# Normal function
+def greeting():
+    return 'Welcome to Python'
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+
+g = uppercase_decorator(greeting)
+print(g())          # WELCOME TO PYTHON
+
+print()
+
+## Let us implement the example above with a decorator
+
+'''This decorator function is a higher order function
+that takes a function as a parameter'''
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+@uppercase_decorator
+def greeting():
+    return 'Welcome to Python'
+print(greeting())   # WELCOME TO PYTHON
+
+# Second decorator
+def split_string_decorator(function):
+    def wrapper():
+        func = function()
+        splitted_string = func.split()
+        return splitted_string
+
+    return wrapper
+
+
+print()
+
+@split_string_decorator
+@uppercase_decorator     # order with decorators is important in this case - .upper() function does not work with lists
+def greeting():
+    return 'Welcome to Python'
+print(greeting())
