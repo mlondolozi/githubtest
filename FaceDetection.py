@@ -12,7 +12,7 @@ face_coordinates = trained_face_data.detectMultiScale(greyscaled_img)
 print(face_coordinates)
 
 #draw coordinates on image 
-cv2.rectangle(img, (533,373), (533+337,373+337), (255,255,255))
+cv2.rectangle(img, (533,373), (533+337,373+337), (0,255,255))
 cv2.imshow('Show the selected image', img)
 cv2.waitKey()
 
