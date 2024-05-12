@@ -26,6 +26,7 @@ while True:
     if key == 81 or key == 113:
         break
 
+webcam.release()
 '''
 #using the trained data to detect a face of the grey scaled image
 face_coordinates = trained_face_data.detectMultiScale(greyscaled_img)
