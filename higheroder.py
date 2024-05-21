@@ -94,5 +94,5 @@ print()
 @split_string_decorator
 @uppercase_decorator     # order with decorators is important in this case - .upper() function does not work with lists
 def greeting():
-    return 'Welcome to Python'
+    return 'Welcome to Python, safa ngu Hollo World'
 print(greeting())
